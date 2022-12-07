@@ -8,3 +8,7 @@ CREATE TABLE users
 
 
 
+/* Opprette en bruker som har full tilgang til denne databasen (og bare denne!) */
+CREATE USER 'chess'@'localhost' IDENTIFIED BY 'Chess123';
+GRANT ALL PRIVILEGES ON chess.* TO 'chess'@'localhost';
+FLUSH PRIVILEGES;
